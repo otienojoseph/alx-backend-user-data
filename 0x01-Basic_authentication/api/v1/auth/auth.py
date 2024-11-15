@@ -8,6 +8,15 @@ from flask import request
 class Auth:
     """
     Class to manage API Authentication
+
+    Methods:
+        require_auth(path, excluded_paths):
+            Determines if path requires authentication
+        authorization_header(request):
+            Retrieves the authorization header from request
+        current_user(request):
+            Retrieves the current user
+
     """
 
     def require_auth(self, path: str, excluded_paths: List[str]) -> bool:
