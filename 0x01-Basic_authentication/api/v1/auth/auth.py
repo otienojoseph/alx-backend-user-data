@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from typing import TypeVar, List
 from flask import request
 """Authentication file"""
