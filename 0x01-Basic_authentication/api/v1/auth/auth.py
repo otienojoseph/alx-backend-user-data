@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
+"""Authentication file"""
 
 from typing import TypeVar, List
 from flask import request
-"""Authentication file"""
 
 
 class Auth:
