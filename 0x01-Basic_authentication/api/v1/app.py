@@ -44,6 +44,7 @@ def forbidden(error) -> str:
 
 @app.before_request
 def before_request_handler():
+    """Handle authentication before processing request"""
     if auth is None:
         return
 
