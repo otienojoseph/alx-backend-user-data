@@ -10,11 +10,10 @@ class BasicAuth(Auth):
 
     Methods:
         extract_base64_authorization_header(authorization_header: str
-        ) -> Extracts the Base64 part of the Authorization header 
+        ) -> Extracts the Base64 part of the Authorization header
     """
-    def extract_base64_authorization_header(self,
-                                            authorization_header: str
-                                            ) -> str:
+    def extract_base64_authorization_header(
+            self, authorization_header: str) -> str:
         """
         Extracts the Base64 part of the 'authorization' header
         for Basic Auth
