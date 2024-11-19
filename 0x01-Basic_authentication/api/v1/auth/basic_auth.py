@@ -5,7 +5,13 @@ from auth import Auth
 
 
 class BasicAuth(Auth):
-    """Basic Authentication class"""
+    """
+    Basic Auth class
+
+    Methods:
+        extract_base64_authorization_header: Methods that returns
+        the Base64 part of the 'authorization' header
+    """
     def extract_base64_authorization_header(self,
                                             authorization_header: str
                                             ) -> str:
