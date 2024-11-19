@@ -6,25 +6,21 @@ from auth import Auth
 
 class BasicAuth(Auth):
     """
-    Basic Auth class
-
-    Methods:
-        extract_base64_authorization_header: Methods that returns
-        the Base64 part of the 'authorization' header
+    BasicAuth class for managing Basic Authentication
     """
     def extract_base64_authorization_header(self,
                                             authorization_header: str
                                             ) -> str:
         """
-        Method that returns the Base64 part of the 'authorization'
-        header for Basic Authentication
+        Extracts the Base64 part of the 'authorization' header
+        for Basic Auth
 
         Args:
-            authorization_header (str): Authorization header
+            authorization_header (str): Authorization header value
 
         Returns:
-            The Base64 part of the 'Authorization' header for
-            basic authentication
+            str: The Base64 encoded part of the 'Authorization' header or
+            None if invvalid
         """
         if not authorization_header or not isinstance(
             authorization_header, str
