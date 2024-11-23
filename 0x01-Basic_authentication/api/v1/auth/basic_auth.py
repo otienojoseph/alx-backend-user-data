@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """BasicAuth authentication module"""
 
-Auth = __import__('auth').Auth
+# Auth = __import__('auth').Auth
+from auth import Auth
 
 
 class BasicAuth(Auth):
