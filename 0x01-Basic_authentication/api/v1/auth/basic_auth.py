@@ -110,8 +110,11 @@ class BasicAuth(Auth):
             return None
 
         # search for User by search
-        users = User.search({"email": user_email})
-        if not users or len(users) == 0:
+        try:
+            users = User.search({"email": user_email})
+            if not users or len(users) == 0:
+                return None
+        except Exception as e:
             return None
 
         # return None if user_pwd != instance password
